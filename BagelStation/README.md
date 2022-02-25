@@ -24,7 +24,43 @@ Bagel Station is a Retail Application that enables Users to Order their favorite
 ### - **views**
     This folder contains all the HTML files for the application. These are stored in the ejs format which is a simple templating language which is used to generate HTML markup with plain JavaScript. Even basic functionalities using JavaScript can be embedded to the HTML pages. Inside the views folder contains the
     partials folder which contains portions of HTML code that can be re-used or repeated HTML sections such as footers and headers. All new pages needs to be added here. Basic Functionalities for the existing views are as follows:
-    
+### - partials
+### &nbsp;&nbsp;&nbsp; - footer.ejs
+    Contains the footer portion of the entire application that is common across all the pages.
+### &nbsp;&nbsp;&nbsp; - footersection.ejs
+    Contains the content present in the region above the footer
+### &nbsp;&nbsp;&nbsp; - header.ejs
+    Contains the Header section of the application which is common across all the Pages.
+    This includes the User Profile section as well.
+    All scripts and links required for the application is defined here as this section contains the head tag.
+### &nbsp;&nbsp;&nbsp; - home.ejs
+    This contains all the content displayed in the landing/home page of the application post login.
+    It contains all the information about Bagel Station.
+### &nbsp;&nbsp;&nbsp; - leftmenu.ejs
+    This partial contains the HTML for the Left Navigation menu which is common across pages.
+    Any new Navigation link required needs to be updated here.
+### - cart.ejs
+    This contains the HTML for the Cart functionality.
+    It includes increasing/decreasing the quantity of the Products added to the Cart, deleting Products present in the Cart and provision to Confirm and proceed with the Order.
+### - createorupdateitem.ejs
+    This contains the form to Create/Update the item. Any new fields that needs to be displayed or updated needs to be added here.
+### - error.ejs
+    This contains the general error content that is shown when an unexpected error occurs in the application.
+    Any new information, for example showing a Create Ticket link, can be added here.
+### - index.ejs
+    This is the main HTML content file that includes the partials and navigations.
+### - login.ejs
+    This contains the login page content, any new information that needs to be displayed on the landing page of the application can be displayed here.
+### - loginerror.ejs
+    This contains the content displayed during login error.
+### - orderhistory.ejs
+    This contains the content displayed in the Order History Page.
+### - productdetails.ejs
+    This contains the content displayed when clicked on a Product. It lists all the details of the Product along with Customizations and price. You can increase the quantity and add the same to the cart.
+### - register.ejs
+    This contains the content required for signing up a User. Multiple validations such as password criteria, inclusion of address, email id format and duplicate User Id is handled here.
+### - registersuccess.ejs
+    This contains the content displayed on successful Sign Up/Registration of a User.
 
 ### - **app.js**
     This is the entry point to the Application. All the middlewares that are required in the application needs to be registered here. Features like Application level Sessions, Application level Error Handling, Registering the routes are handled here. Connections to database, in our case MongoDB is done here, for connecting to any other database, the connection needs to be defined here.
