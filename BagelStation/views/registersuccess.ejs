@@ -1,0 +1,16 @@
+<%- include ('partials/header') %>
+    <div class="container-fluid">
+        <div class="product-title text-center mt-2 mb-2">
+            <div>Registered Successfully!</div>
+            <div class="mt-3"> Welcome <%=name%>, </div>
+            <div>You will be redirected to Login page, please login to start Ordering!</div>
+        </div>
+        <%- include ('partials/footer') %>
+
+            <script>
+                $(document).ready(function () {
+                    setTimeout(() => {
+                        window.open('/login', "_self");
+                    }, 3000);
+                });
+            </script>
